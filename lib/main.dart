@@ -3178,7 +3178,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void setupAndListen() async {
     debugPrint("before await initializeUdpSocket()");
-    await initializeUdpSocket('192.168.15.13', 4001); // Listen on all available interfaces
+    await initializeUdpSocket('0.0.0.0', 4001); // Listen on all available interfaces
     debugPrint("after await initializeUdpSocket()");
     listenForUdpMessages();
     debugPrint("after listenForUdpMessages");
