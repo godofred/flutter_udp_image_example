@@ -3207,6 +3207,7 @@ class _MyHomePageState extends State<MyHomePage> {
     debugPrint("before setupAndListen()");
     setupAndListen();
     debugPrint("after setupAndListen()");
+    img_jpg_uint8 = Uint8List.fromList(img_jpg);
   }
 
   @override
