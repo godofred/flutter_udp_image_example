@@ -3159,8 +3159,11 @@ class _MyHomePageState extends State<MyHomePage> {
   RawDatagramSocket? udpSocket;
 
   Future<void> initializeUdpSocket(String ipAddress, int port) async {
+    var multicast_address = "231.2.3.1";
     udpSocket = await RawDatagramSocket.bind(ipAddress, port);
     debugPrint("initialized udpSocket");
+    udpSocket?.joinMulticast(InternetAddress(multicast_address));
+    debugPrint("joined multicast group $multicast_address");
   }
 
   void listenForUdpMessages() {
